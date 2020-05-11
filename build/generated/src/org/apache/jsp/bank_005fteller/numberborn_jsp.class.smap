@@ -1,0 +1,21 @@
+SMAP
+numberborn_jsp.java
+JSP
+*S JSP
+*F
++ 0 numberborn.jsp
+bank_teller/numberborn.jsp
+*L
+5,16:63
+20:103,16
+21,7:119
+27:179,6
+27,5:128
+31:198,6
+31,5:135
+35:217,6
+35,11:142
+45:236,14
+45,5:155
+49,5:81
+*E

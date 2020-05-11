@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="entity.Bank_teller" table="accout" table="account">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="increment"/>
+    </id>
+    <property name="account_number" type="string">
+      <column length="30" name="account_number" not-null="true"/>
+    </property>
+    <property name="password" type="string">
+      <column length="30" name="password" not-null="true"/>
+    </property>
+    <property name="id_number" type="string">
+      <column length="30" name="id_number" not-null="true"/>
+    </property>
+    <property name="phone" type="string">
+      <column length="30" name="phone" not-null="true"/>
+    </property>
+    <property name="type" type="int">
+      <column length="30" name="type" not-null="true"/>
+    </property>
+    <property name="name" type="string">
+      <column length="30" name="name" not-null="true"/>
+    </property>
+    <property name="money" type="double">
+      <column length="30" name="money" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

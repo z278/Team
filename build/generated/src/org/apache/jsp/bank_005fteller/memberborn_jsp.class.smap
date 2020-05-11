@@ -1,0 +1,21 @@
+SMAP
+memberborn_jsp.java
+JSP
+*S JSP
+*F
++ 0 memberborn.jsp
+bank_teller/memberborn.jsp
+*L
+5,16:60
+20:100,16
+21,7:116
+27:176,6
+27,5:125
+31:195,6
+31,5:132
+35:214,6
+35,11:139
+45:233,14
+45,5:152
+49,5:78
+*E
