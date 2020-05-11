@@ -13,9 +13,7 @@ import entity.Admin;
 import entity.Teller;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
-import org.apache.struts2.ServletActionContext;
 import tdao.TellerDao;
 
 /**
@@ -61,7 +59,7 @@ public class Login extends ActionSupport{
                 JOptionPane.showConfirmDialog(null, "账号不能为空！");
             }else{
                 AccountDao ac = new AccountDao();
-                list=ac.queryInfo("username", this.getUsername());
+                list=ac.queryInfo("getAccount_number", this.getUsername());
                 if(list.size()==0){
                     JOptionPane.showConfirmDialog(null, "该账号尚未注册！");
                 }else{
@@ -70,7 +68,7 @@ public class Login extends ActionSupport{
                     for(int i=0;i<list.size();i++){
                         count++;
                         a = (Account)list.get(i);
-                        if(this.getUsername().equals(a.getUsername())){
+                        if(this.getUsername().equals(a.getAccount_number())){
                             if(a.getPassword().equals(this.getPassword())){
                                 message="account";
                             }else{

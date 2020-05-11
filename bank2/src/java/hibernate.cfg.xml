@@ -45,5 +45,6 @@
     <mapping resource="entity/Teller.hbm.xml"/>
     <mapping resource="entity/Account.hbm.xml"/>
     <mapping resource="entity/UserPO.hbm.xml"/>
+    <mapping resource="entity/Record.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

@@ -7,8 +7,8 @@
             <column name="id" />
             <generator class="identity" />
         </id>
-        <property name="username" type="string">
-            <column name="username" length="18" not-null="true" />
+        <property name="account_number" type="string">
+            <column name="account_number" length="18" not-null="true" />
         </property>
         <property name="password" type="string">
             <column name="password" length="18" not-null="true" />

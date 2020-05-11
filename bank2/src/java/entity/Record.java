@@ -11,16 +11,12 @@ import java.util.Date;
  *
  * @author hp
  */
-public class UserPO {
+public class Record {
     private int id;
     private String account_number;
-    private String password;
-    private String id_number;
-    private String phone;
-    private String name;
+    private String type;
     private double money;
     private Date date;
-
     public int getId() {
         return id;
     }
@@ -37,38 +33,12 @@ public class UserPO {
         this.account_number = account_number;
     }
 
-    public String getPassword() {
-        return password;
+    public String getType() {
+        return type;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getId_number() {
-        return id_number;
-    }
-
-    public void setId_number(String id_number) {
-        this.id_number = id_number;
-    }
-
-    
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public double getMoney() {

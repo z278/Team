@@ -11,14 +11,14 @@ package entity;
  */
 public class Account {
     private Integer id;
-    private String username;
+    private String account_number;
     private String password;
 
     public Account() {
     }
 
-    public Account(String username, String password) {
-       this.username = username;
+    public Account(String account_number, String password) {
+       this.account_number = account_number;
        this.password = password;
     }
    
@@ -29,13 +29,15 @@ public class Account {
     public void setId(Integer id) {
         this.id = id;
     }
-    public String getUsername() {
-        return this.username;
+
+    public String getAccount_number() {
+        return account_number;
+    }
+
+    public void setAccount_number(String account_number) {
+        this.account_number = account_number;
     }
     
-    public void setUsername(String username) {
-        this.username = username;
-    }
     public String getPassword() {
         return this.password;
     }

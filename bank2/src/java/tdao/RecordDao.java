@@ -3,37 +3,39 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cdao;
+package tdao;
 
-import java.util.List;
+import entity.Record;
 import javax.swing.JOptionPane;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import sessionFactory.HibernateSessionFactory;
 
+
+
 /**
  *
  * @author hp
  */
-public class AccountDao {
+public class RecordDao {
     private Session session;
     private Transaction transaction;
     private Query query;
     HibernateSessionFactory getSession;
-    public List queryInfo(String type, String value) {
-        getSession = new HibernateSessionFactory();
-        session=getSession.getSession();
+    
+    public String saveInfo(Record r){
+        String mess="error";
+        getSession=new HibernateSessionFactory();
+        session=HibernateSessionFactory.getSession();
         try{
-            String hqlsql = "from Account as u where u.account_number=?";
-            query = session.createQuery(hqlsql);
-            query.setParameter(0,value);
-            List list = query.list();
-            transaction = session.beginTransaction();
+            transaction=session.beginTransaction();
+            session.save(r);
             transaction.commit();
-            return list;
+            mess="success";
+            return mess;
         }catch(Exception e){
-            message("LoginRegisterInfo类中有异常，异常为："+e);
+            message("RecordDao.error:"+e);
             e.printStackTrace();
             return null;
         }

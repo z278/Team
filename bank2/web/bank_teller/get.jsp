@@ -1,7 +1,7 @@
 <%-- 
-    Document   : TeamLogin
+    Document   : get.jsp
     Created on : 2020-4-6, 16:55:56
-    Author     : 标哥！
+    Author     : 张娜
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -13,6 +13,7 @@
         <title>取款</title>
     </head>
     <body>
+        
         <form name="form1" action="get" method="post">
             <table name="table1" align="center" cellpadding="0.5">
                 <tr>

@@ -6,10 +6,13 @@
 package action;
 
 import com.opensymphony.xwork2.ActionSupport;
+import entity.Record;
 import entity.UserPO;
+import java.util.Date;
 import java.util.List;
 import javax.swing.JOptionPane;
 import tdao.GetDao;
+import tdao.RecordDao;
 
 /**
  *
@@ -64,11 +67,22 @@ public class GetAction extends ActionSupport{
                         }else if(this.money > userPO.getMoney()){
                             JOptionPane.showMessageDialog(null, "账号余额不够");
                         }else {
-                            userPO.setMoney(userPO.getMoney()-this.money);
-                            boolean update=gd.updateInfo(userPO);
-                            if(update){
-                                mess="success";
-                            };
+                            int is = JOptionPane.showConfirmDialog(null, "你取款"+this.money, "提示", JOptionPane.YES_NO_CANCEL_OPTION);
+                            if(is == JOptionPane.YES_OPTION){
+                                userPO.setMoney(userPO.getMoney()-this.money);
+                                boolean update=gd.updateInfo(userPO);
+                                if(update){
+                                    mess="success";
+                                }
+                                RecordDao recordDao = new RecordDao();
+                                Record record = new Record();
+                                record.setType("取款");
+                                record.setMoney(this.money);
+                                record.setAccount_number(this.account_number);
+                                Date date = new Date();
+                                record.setDate(date);
+                                recordDao.saveInfo(record);
+                            }
                         }
                     }else{
                         JOptionPane.showMessageDialog(null, "登录密码不正确！");
