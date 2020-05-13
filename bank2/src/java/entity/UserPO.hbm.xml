@@ -18,11 +18,11 @@
         <property name="id_number" type="string">
             <column length="30" name="id_number" not-null="true"/>
         </property>
-        <property name="phone" type="string">
-            <column length="30" name="phone" not-null="true"/>
+        <property name="myphone" type="string">
+            <column length="30" name="myphone" not-null="true"/>
         </property>
-        <property name="name" type="string">
-            <column length="30" name="name" not-null="true"/>
+        <property name="username" type="string">
+            <column length="30" name="username" not-null="true"/>
         </property>
         <property name="money" type="double">
             <column length="30" name="money" not-null="true"/>

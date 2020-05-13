@@ -8,9 +8,9 @@ package action;
 import cdao.AccountDao;
 import com.opensymphony.xwork2.ActionSupport;
 import dao.AdminDao;
-import entity.Account;
 import entity.Admin;
 import entity.Teller;
+import entity.UserPO;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.swing.JOptionPane;
@@ -63,13 +63,13 @@ public class Login extends ActionSupport{
                 if(list.size()==0){
                     JOptionPane.showConfirmDialog(null, "该账号尚未注册！");
                 }else{
-                    Account a = new Account();
+                    UserPO u = new UserPO();
                     int count=0;
                     for(int i=0;i<list.size();i++){
                         count++;
-                        a = (Account)list.get(i);
-                        if(this.getUsername().equals(a.getAccount_number())){
-                            if(a.getPassword().equals(this.getPassword())){
+                        u = (UserPO)list.get(i);
+                        if(this.getUsername().equals(u.getAccount_number())){
+                            if(u.getPassword().equals(this.getPassword())){
                                 message="account";
                             }else{
                                 JOptionPane.showConfirmDialog(null, "登录密码不正确！");

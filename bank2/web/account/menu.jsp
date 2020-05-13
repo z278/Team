@@ -21,18 +21,10 @@
                         <dt onClick='showHide("items1_1")'><b>账户应用</b></dt>
                         <dd style='display:block' class='sitem' id='items1_1'>
                             <ul class='sitemu'>
-                                <li><div class='fllct'><a href='addstudent.jsp' target='main'>查看余额</a></div> </li>
+                                <li><div class='fllct'><a href='balance.jsp' target='main'>查看余额</a></div> </li>
                                 <li>
                                     <div class='fllct'><a href='importStudent.jsp' target='main'>转账</a></div>
                                 </li>
-                            </ul>
-                        </dd>
-                    </dl>
-                    <dl class='bitem'>
-                        <dt onClick='showHide("items2_1")'><b>个人信息管理</b></dt>
-                        <dd style='display:block' class='sitem' id='items2_1'>
-                            <ul class='sitemu'>
-                                <li><a href='changPass.jsp' target='main'>修改密码</a></li>
                             </ul>
                         </dd>
                     </dl>

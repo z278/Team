@@ -17,39 +17,14 @@
         <table width='99%' height="100%" border='0' cellspacing='0' cellpadding='0'>
             <tr>
                 <td style='padding-left:3px;padding-top:8px' valign="top">
-                    <dl class='bitem'>
-                        <dt onClick='showHide("items1_1")'><b>储户管理</b></dt>
-                        <dd style='display:block' class='sitem' id='items1_1'>
-                            <ul class='sitemu'>
-                                <li>
-                                    <div class='items'>
-                                        <div class='fllct'><a href='pageAction' target='main'>查看所有储户</a></div>
-                                    </div>
-                                </li>
-                                <li><div class='fllct'><a href='addstudent.jsp' target='main'>添加储户</a></div> </li>
-                                <li>
-                                    <div class='fllct'><a href='importStudent.jsp' target='main'>导入储户</a></div>
-                                </li>
-                            </ul>
-                          </dd>
-                        </dl>
                         <dl class='bitem'>
                             <dt onClick='showHide("items2_1")'><b>业务员管理</b></dt>
                             <dd style='display:block' class='sitem' id='items2_1'>
                                 <ul class='sitemu'>
-                                    <li><a href='tpageAction' target='main'>查看所有业务员</a></li>
-                                    <li><a href='addteacher.jsp' target='main'>添加业务员</a></li>
-                                    <li><a href='importTeacher.jsp' target='main'>导入业务员</a></li>
-                                </ul>
-                            </dd>
-                        </dl>
-                        <dl class='bitem'>
-                            <dt onClick='showHide("items2_1")'><b>账户管理</b></dt>
-                            <dd style='display:block' class='sitem' id='items2_1'>
-                                <ul class='sitemu'>
-                                    <li><a href='cpageAction' target='main'>查看所有账户</a></li>
-                                    <li><a href='addclasses.jsp' target='main'>添加账户</a></li>
-                                    <li><a href='' target='main'>导入账户</a></li>
+                                    <li><a href='' target='main'>查看所有业务员</a></li>
+                                    <li><a href='register_teller.jsp' target='main'>添加业务员</a></li>
+                                    <li><a href='change_teller.jsp' target='main'>修改业务员密码</a></li>
+                                    <li><a href='delete.jsp' target='main'>注销业务员</a></li>
                                 </ul>
                             </dd>
                         </dl>

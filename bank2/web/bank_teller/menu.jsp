@@ -23,15 +23,15 @@
                             <ul class='sitemu'>
                                 <li>
                                     <div class='items'>
-                                        <div class='fllct'><a href='pageAction' target='main'>开设账户</a></div>
+                                        <div class='fllct'><a href='registerA.jsp' target='main'>开设储户</a></div>
                                     </div>
                                 </li>
-                                <li><div class='fllct'><a href='addstudent.jsp' target='main'>修改账户信息</a></div> </li>
+                                <li><div class='fllct'><a href='change.jsp' target='main'>修改储户密码</a></div> </li>
                                 <li>
-                                    <div class='fllct'><a href='importStudent.jsp' target='main'>查询账户信息</a></div>
+                                    <div class='fllct'><a href='information.jsp' target='main'>查询储户信息</a></div>
                                 </li>
                                 <li>
-                                    <div class='fllct'><a href='importStudent.jsp' target='main'>注销账户</a></div>
+                                    <div class='fllct'><a href='delete.jsp' target='main'>注销储户</a></div>
                                 </li>
                             </ul>
                           </dd>
@@ -40,19 +40,10 @@
                             <dt onClick='showHide("items2_1")'><b>业务管理</b></dt>
                             <dd style='display:block' class='sitem' id='items2_1'>
                                 <ul class='sitemu'>
-                                    <li><a href='tpageAction' target='main'>存款</a></li>
+                                    <li><a href='set.jsp' target='main'>存款</a></li>
                                     <li><a href='get.jsp' target='main'>取款</a></li>
                                     <li><a href='addteacher.jsp' target='main'>转账</a></li>
-                                    <li><a href='addteacher.jsp' target='main'>查询余额</a></li>
-                                    <li><a href='importTeacher.jsp' target='main'>查看记录</a></li>
-                                </ul>
-                            </dd>
-                        </dl>
-                        <dl class='bitem'>
-                            <dt onClick='showHide("items2_1")'><b>个人信息管理</b></dt>
-                            <dd style='display:block' class='sitem' id='items2_1'>
-                                <ul class='sitemu'>
-                                    <li><a href='changPass.jsp' target='main'>修改密码</a></li>
+                                    <li><a href='recordsQuery.jsp' target='main'>查看记录</a></li>
                                 </ul>
                             </dd>
                         </dl>

@@ -25,7 +25,7 @@ public class AccountDao {
         getSession = new HibernateSessionFactory();
         session=getSession.getSession();
         try{
-            String hqlsql = "from Account as u where u.account_number=?";
+            String hqlsql = "from UserPO as u where u.account_number=?";
             query = session.createQuery(hqlsql);
             query.setParameter(0,value);
             List list = query.list();
@@ -33,7 +33,7 @@ public class AccountDao {
             transaction.commit();
             return list;
         }catch(Exception e){
-            message("LoginRegisterInfo类中有异常，异常为："+e);
+            message("AccountDao类中有异常，异常为："+e);
             e.printStackTrace();
             return null;
         }

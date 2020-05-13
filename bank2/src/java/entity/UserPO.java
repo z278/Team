@@ -16,8 +16,8 @@ public class UserPO {
     private String account_number;
     private String password;
     private String id_number;
-    private String phone;
-    private String name;
+    private String myphone;
+    private String username;
     private double money;
     private Date date;
 
@@ -53,23 +53,23 @@ public class UserPO {
         this.id_number = id_number;
     }
 
+    public String getMyphone() {
+        return myphone;
+    }
+
+    public void setMyphone(String myphone) {
+        this.myphone = myphone;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public double getMoney() {
         return money;

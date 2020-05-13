@@ -5,6 +5,7 @@
  */
 package tdao;
 
+import entity.Teller;
 import java.util.List;
 import javax.swing.JOptionPane;
 import org.hibernate.Session;
@@ -38,6 +39,56 @@ public class TellerDao {
             e.printStackTrace();
             return null;
         }
+    }
+    
+    public boolean deleteInfo(int id){
+        try{
+            session=HibernateSessionFactory.getSession();
+            transaction=session.beginTransaction();
+            Teller info=new Teller();
+            info=(Teller)session.get(Teller.class, new Integer(id));
+            session.delete(info);
+            transaction.commit();
+            session.close();
+            return true;
+        }catch(Exception e){
+            message("deleteInfo.error:"+e);
+            e.printStackTrace();
+            return false;
+        }
+    }
+    
+    public String saveInfo(Teller info){
+        String mess="error";
+        getSession=new HibernateSessionFactory();
+        session=HibernateSessionFactory.getSession();
+        try{
+            transaction=session.beginTransaction();
+            session.save(info);
+            transaction.commit();
+            mess="success";
+            return mess;
+        }catch(Exception e){
+            message("RecordDao.error:"+e);
+            e.printStackTrace();
+            return null;
+        }
+    }
+    
+    public boolean updateInfo(Teller info){
+        try{
+            session = HibernateSessionFactory.getSession();
+            transaction = session.beginTransaction();
+            session.update(info);
+            transaction.commit();
+            session.close();
+            return true;
+        } catch(Exception e){
+            message("RecordDao.error:"+e);
+            e.printStackTrace();
+            return false;
+        }
+        
     }
     
     public void message(String mess){

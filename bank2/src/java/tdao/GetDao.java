@@ -22,6 +22,41 @@ public class GetDao {
     private Transaction transaction;
     private Query query;
     HibernateSessionFactory getSession;
+    
+    public String saveInfo(UserPO info){
+        String mess="error";
+        getSession=new HibernateSessionFactory();
+        session=HibernateSessionFactory.getSession();
+        try{
+            transaction=session.beginTransaction();
+            session.save(info);
+            transaction.commit();
+            mess="success";
+            return mess;
+        }catch(Exception e){
+            message("RecordDao.error:"+e);
+            e.printStackTrace();
+            return null;
+        }
+    }
+    
+    public boolean deleteInfo(int id){
+        try{
+            session=HibernateSessionFactory.getSession();
+            transaction=session.beginTransaction();
+            UserPO info=new UserPO();
+            info=(UserPO)session.get(UserPO.class, new Integer(id));
+            session.delete(info);
+            transaction.commit();
+            session.close();
+            return true;
+        }catch(Exception e){
+            message("deleteInfo.error:"+e);
+            e.printStackTrace();
+            return false;
+        }
+    }
+    
     public List queryInfo(String type, String value) {
         getSession = new HibernateSessionFactory();
         session=getSession.getSession();
@@ -34,11 +69,13 @@ public class GetDao {
             transaction.commit();
             return list;
         }catch(Exception e){
-            message("LoginRegisterInfo类中有异常，异常为："+e);
+            message("RecordDao类中有异常，异常为："+e);
             e.printStackTrace();
             return null;
         }
     }
+    
+    
     
     public boolean updateInfo(UserPO info){
         try{
@@ -49,7 +86,7 @@ public class GetDao {
             session.close();
             return true;
         } catch(Exception e){
-            message("updateInfo.error:"+e);
+            message("RecordDao.error:"+e);
             e.printStackTrace();
             return false;
         }
