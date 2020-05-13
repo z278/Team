@@ -6,9 +6,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>长春市奋进乡村镇银行储蓄业务系统</title>
+        <script type="text/javascript">
+            
+        </script>
     </head>
     <body>
-        <s:form  action="login" method="post">
+        <s:form action="login" method="post">
             <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                     <td>&nbsp;</td>
@@ -37,12 +40,18 @@
                                                     <tr>
                                                         <td height="30"><div align="center"><span class="STYLE3">密码</span></div></td>
                                                         <td height="30"><input type="password" name="password"  style="height:18px; width:130px; border:solid 1px #cadcb2; font-size:12px; color:#81b432;"></td>
-                                                        <td height="30"><label><input type="radio" name="radiobutton" value="2">业务员 </label></td>
+                                                        <td height="30"><label><input type="radio" name="radiobutton" value="2">柜员 </label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img id="loginform:vCode" src="${pageContext.request.contextPath }/validatecode.jsp" onclick="javascript:document.getElementById('loginform:vCode').src='${pageContext.request.contextPath }/validatecode.jsp?'+Math.random();" /></td>
+                                                        <td><input style="height:18px; width:130px; border:solid 1px #cadcb2; font-size:12px; color:#81b432;" type="text" name="checkcode" title="请输入验证码" /></td>
+                                                        <!--<td>&nbsp;</td>-->
+                                                        <td height="30"><input type="radio" name="radiobutton" value="3">管理</td>
                                                     </tr>
                                                     <tr>
                                                         <td height="30">&nbsp;</td>
                                                         <td height="30"><input type="submit" value="登录" ><label><input type="reset" name="Submit" value="重置"></label></td>
-                                                        <td height="30"><input type="radio" name="radiobutton" value="3">管理员</td>
+                                                        
                                                     </tr>
                                                   </table>
                                                 </td>

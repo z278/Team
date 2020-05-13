@@ -68,5 +68,9 @@
             <result name="success">/admin/success.jsp</result>
             <result name="input">/admin/change_teller.jsp</result>
         </action>
+        <action name="changPass" class="aAction.ChangPass">
+            <result name="success">/admin/success.jsp</result>
+            <result name="input">/admin/changPass.jsp</result>
+        </action>
    </package>
 </struts>

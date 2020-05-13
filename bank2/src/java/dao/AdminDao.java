@@ -40,6 +40,22 @@ public class AdminDao {
         }
     }
     
+    public boolean updateInfo(Admin info){
+        try{
+            session = HibernateSessionFactory.getSession();
+            transaction = session.beginTransaction();
+            session.update(info);
+            transaction.commit();
+            session.close();
+            return true;
+        } catch(Exception e){
+            message("RecordDao.error:"+e);
+            e.printStackTrace();
+            return false;
+        }
+        
+    }
+    
     public void message(String mess){
         int type = JOptionPane.YES_NO_OPTION;
         String title = "提示信息";
