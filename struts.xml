@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+    <package name="default" extends="struts-default">
+        <!--登录-->
+        <action name="login" class="action.Login">
+            <result name="success" type="redirect">/admin/index.jsp</result>
+            <result name="account" type="redirect">/account/index.jsp</result>
+            <result name="teller" type="redirect">/bank_teller/index.jsp</result>
+            <result name="input" type="redirect">/index.jsp</result>
+        </action>
+        
+        
+        <action name="get" class="action.GetAction">
+            <result name="success">/bank_teller/success.jsp</result>
+            <result name="input">/bank_teller/get.jsp</result>
+        </action>
+        <action name="set" class="action.SetAction">
+            <result name="success">/bank_teller/success.jsp</result>
+            <result name="input">/bank_teller/set.jsp</result>
+        </action>
+        <action name="transfer" class="action.Transfer">
+            <result name="success">/bank_teller/success.jsp</result>
+            <result name="input">/bank_teller/transfer.jsp</result>
+        </action>
+        <action name="recordsQuery" class="action.RecordsQuery">
+            <result name="success">/bank_teller/results.jsp</result>
+            <result name="input">/bank_teller/recordsQuery.jsp</result>
+        </action>
+        <action name="delete" class="action.DeleteAction">
+            <result name="success">/bank_teller/success.jsp</result>
+            <result name="input">/bank_teller/delete.jsp</result>
+        </action>
+        <action name="information" class="action.InformationAction">
+            <result name="success">/bank_teller/information_success.jsp</result>
+            <result name="input">/bank_teller/information.jsp</result>
+        </action>
+        <action name="change" class="action.ChangeAction">
+            <result name="success">/bank_teller/success.jsp</result>
+            <result name="input">/bank_teller/change.jsp</result>
+        </action>
+        <action name="registerA" class="action.Register">
+            <result name="success">/bank_teller/success.jsp</result>
+            <result name="input">/bank_teller/registerA.jsp</result>
+        </action>
+        
+        <action name="balance" class="cAction.BalanceAction">
+            <result name="success">/account/balance_success.jsp</result>
+            <result name="input">/account/balance.jsp</result>
+        </action>
+        <action name="transfer_accounts" class="action.Transfer">
+            <result name="success">/account/success.jsp</result>
+            <result name="input">/account/transfer_accounts.jsp</result>
+        </action>
+        
+        <action name="register_teller" class="aAction.RegisterAction">
+            <result name="success">/admin/success.jsp</result>
+            <result name="input">/admin/register_teller.jsp</result>
+        </action>
+        <action name="delete_teller" class="aAction.Delete">
+            <result name="success">/admin/success.jsp</result>
+            <result name="input">/admin/delete_teller.jsp</result>
+        </action>
+        <action name="change_teller" class="aAction.ChangeAction">
+            <result name="success">/admin/success.jsp</result>
+            <result name="input">/admin/change_teller.jsp</result>
+        </action>
+        <action name="changPass" class="aAction.ChangPass">
+            <result name="success">/admin/success.jsp</result>
+            <result name="input">/admin/changPass.jsp</result>
+        </action>
+        <action name="look_allteller" class="aAction.LookAllMsg">
+            <result name="success">/admin/look_allteller.jsp</result>
+            <result name="input">/admin/index.jsp</result>
+        </action>        
+   </package>
+</struts>
