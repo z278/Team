@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/E:/team/bank2/src/java/aAction/RegisterAction.java</file>
+            <file>file:/E:/team/bank2/web/admin/register_teller.jsp</file>
+            <file>file:/E:/team/bank2/src/java/tdao/GetDao.java</file>
+            <file>file:/E:/team/bank2/web/admin/change_teller.jsp</file>
+            <file>file:/E:/team/bank2/src/java/action/GetAction.java</file>
+            <file>file:/E:/team/bank2/src/java/aAction/LookAllMsg.java</file>
+            <file>file:/E:/team/bank2/src/java/action/DeleteAction.java</file>
+            <file>file:/E:/team/bank2/web/bank_teller/registerA.jsp</file>
+            <file>file:/E:/team/bank2/src/java/aAction/ChangeAction.java</file>
+            <file>file:/E:/team/bank2/web/bank_teller/change.jsp</file>
+            <file>file:/E:/team/bank2/web/admin/top.jsp</file>
+            <file>file:/E:/team/bank2/src/java/aAction/ChangPass.java</file>
+            <file>file:/E:/team/bank2/src/java/action/Register.java</file>
+            <file>file:/E:/team/bank2/src/java/action/ChangeAction.java</file>
+            <file>file:/E:/team/bank2/web/admin/changPass.jsp</file>
+            <file>file:/E:/team/bank2/src/java/action/Login.java</file>
+            <file>file:/E:/team/bank2/web/admin/look_allteller.jsp</file>
+            <file>file:/E:/team/bank2/src/java/struts.xml</file>
+            <file>file:/E:/team/bank2/src/java/action/Transfer.java</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="entity.Record" table="record" catalog="bank">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="increment"/>
+        </id>
+        <property name="account_number" type="string">
+            <column length="18" name="account_number" not-null="true"/>
+        </property>
+        <property name="type" type="string">
+            <column length="10" name="type" not-null="true"/>
+        </property>
+        <property name="money" type="double">
+            <column length="18" name="money" not-null="true"/>
+        </property>
+        <property name="date" type="java.util.Date">
+            <column length="20" name="date" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
